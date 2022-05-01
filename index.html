@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html class="scroll-smooth hover:scroll-auto">
+<head>
+    <!--
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    -->
+    <title>Home</title>
+    <!-- Tailwinds -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- fontawesome & googleapisfonts -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Fredoka:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Fredoka:wght@500&family=Kaushan+Script&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/typeit@8.5.3/dist/index.umd.js"></script>
+    
+    <!-- sweetalert2 -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <!-- Javascript -->
+    <script>
+        tailwind.config = {
+          theme: {
+           /* fontSize: {
+            }, */
+            container: {
+              center: true,
+              padding: "16px",
+            },
+            extend: {
+                colors: {
+                    primary: "#14532d",
+                    dark: "#0f172a",
+                    secondary: "#475569",
+                    secondary2: "#64748b",
+                }
+            },
+            screens: {
+                '2xl': '1320px',
+            }
+          },
+          plugins: [],
+        }
+    </script>
+    
+  <!-- Css -->
+  <style type="text/tailwindcss">
+    @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        .navbar-fixed{
+            @apply fixed z-[9999] bg-white bg-opacity-70;
+            backdrop-filter: blur(7px);
+            box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.1);
+        }
+        .hamburger-line{
+            @apply w-[30px] h-[2px] my-2 block bg-dark;
+        }
+        .hamburger-active > span:nth-child(1){
+            @apply rotate-45 bg-primary;
+        }
+        .hamburger-active > span:nth-child(2){
+            @apply scale-0;
+        }
+        .hamburger-active > span:nth-child(3){
+            @apply bg-primary -rotate-45;
+        }
+        #shr{
+        font-family: 'Belleza', sans-serif;
+        }
+        #eid{
+        font-family: 'Kaushan Script', cursive;
+        }
+        #simpleUsage{
+        font-family: 'Belleza', sans-serif;
+        }
+        #bg{
+            margin-top: -30rem;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            z-index: -999;
+        }
+        
+        
+body {
+    background-color: white;
+    color: #fff;
+    text-align: center;
+} 
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -9999;
+}
+        
+    }
+  </style>
+</head>
+<body>
+    
+   <canvas id="Canvas"></canvas>
+    <!-- Navbar START -->
+    <header class="top-0 left-0 absolute w-full flex items-center z-10 navbar-fixed">
+        <div class="container">
+            <div class="flex items-center justify-beetwen relative">
+                <div class="px-4 mt-2">
+                    <a href="/" class="font-bold text-lg block text-dark py-6">Hidhz' <span class="text-primary">DEV</sqpan></a>
+                </div>
+                <div class="flex items-center px-4">
+                    <button id="hamburger" name="hamburger" class="block absolute right-4">
+                        <span class="hamburger-line transition duration-300 origin-top-left aese-in-out"></span>
+                        <span class="hamburger-line transition duration-300 aese-in-out"></span>
+                        <span class="hamburger-line transition duration-300 origin-bottom-left aese-in-out"></span>
+                    </button>
+                    <nav id="nav-menu" class="hidden absolute py-6 bg-white rounded-lg shadow-lg max-w-[250px] w-full right-4 top-full">
+                      <!--  <ul class="block">
+                            <li class="group">
+                                <a href="#" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary"><i class="fa fa-home"></i><span class="relative bottom-1 left-2">Home</span></a>
+                            </li>
+                            <li class="group">
+                                <a href="#blog" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary"><i class="fas fa-blog"></i><span class="relative bottom-1 left-2">Blog</span></a>
+                            </li>
+                            <li class="group">
+                                <a href="#about" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary"><i class="fas fa-user-cog"></i><span class="relative bottom-1 left-2">About</span></a>
+                            </li>
+                            <li class="group">
+                                <a href="#contact" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary"><i class="fas fa-envelope-open-text"></i><span class="relative bottom-1 left-2">Contatc</span></a>
+                            </li>
+                        </ul> -->
+                        <div class="text-primary text-center font-bold">Love U ❤️</div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Navbar END -->
+    <div class="container pt-[5rem]">
+        <div class="flex flex-wrap">
+            <div class="w-full lg:w-1/2">
+            <div id="gift">
+                <a href="https://www.gambaranimasi.org/cat-bintang-280.htm" class="absolute left-[0] top-[20rem]">
+                    <img src="https://www.gambaranimasi.org/data/media/280/animasi-bergerak-bintang-0046.gif" border="0" alt="animasi-bergerak-bintang-0046" width="150"/>
+                </a>
+                <a href="https://www.gambaranimasi.org/cat-bintang-280.htm" class="absolute top-[20rem]">
+                    <img src="https://www.gambaranimasi.org/data/media/280/animasi-bergerak-bintang-0046.gif" border="0" alt="animasi-bergerak-bintang-0046" width="150"/>
+                </a>
+                <a href="https://www.gambaranimasi.org/cat-bintang-280.htm" class="absolute top-[13rem] right-[8rem]">
+                    <img src="https://www.gambaranimasi.org/data/media/280/animasi-bergerak-bintang-0046.gif" border="0" alt="animasi-bergerak-bintang-0046" width="150"/>
+                </a>
+            </div>
+                
+                <img src="img/gb5.png" class="absolute w-[20rem] left-[22rem]">
+                <img src="img/gb33.png" class="w-[200px]">
+                <img src="img/gb33.png" class="relative w-[200px] top-[-12.3rem] left-[47rem]">
+                <img src="img/gb4.png" class="relative w-[200px] top-[-12.3rem] left-[47rem]">
+                <img src="img/gb4.png" class="relative w-[200px] top-[-50rem] left-[10rem]">
+                
+                <img src="img/gb4.png" class="absolute w-[200px] top-0 left-[37rem]">
+            </div>
+        </div>
+    </div>
+    
+        <!-- jumbotron -->
+    <section id="jumbotron" class="mt-[-15rem]">
+        <div class="container">
+                <div class="text-center mt-[-25rem]">
+                    <h1 class="text-dark font-semibold text-[2rem]" id="shr">Selamat Hari Raya</h1>
+             
+                    <h1 class="font-semibold text-primary text-[6.5rem]" id="eid">Idul Fitri 1443H</h1>
+
+                    <h2 class="text-secondary text-[2rem]" id="shr">Minal Aidzin Wal Faidzin
+                        <p id="simpleUsage" class="text-[2.4rem] text-secondary"></p>
+                    </h2>
+                    <button class="font-semibold text-white bg-primary py-3 px-8 rounded-full hover:bg-emerald-900" onclick="klik()">by @hidhz.dev</button>
+                </div>
+        </div>
+    </section>
+    <div class="mt-[13rem]">
+        <img src="img/gb11.png" id="bg" class="w-full bottom-0">
+    </div>
+
+    <script>
+    function klik(){
+     Swal.fire({
+         icon: 'success',
+          title: 'Selamat Hari Raya Idul Fitri 1443H',
+          text: 'Minal Aidzin Wal Faidzin, Mohon Maaf Lahir Dan Batin. oh,iya jangan lupa thr nya kaka',
+     })
+    }
+    
+    
+    
+    const hamburger = document.querySelector('#hamburger');
+    const navMenu = document.querySelector('#nav-menu');
+    
+    hamburger.addEventListener('click',function(){
+        hamburger.classList.toggle('hamburger-active');
+        navMenu.classList.toggle('hidden');
+    });
+    
+    new TypeIt("#simpleUsage", {
+      strings: "Mohon Maaf Lahir Dan Batin.",
+      speed: 50,
+      waitUntilVisible: true,
+    }).go();
+    </script>
+    <script src="app.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
